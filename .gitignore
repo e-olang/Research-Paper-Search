@@ -1,7 +1,10 @@
 # Files
 *.DS_Store
 *.csv
+*.pkl
+*.sav
 
 # Directories
 sampledata
 Drafts
+
