@@ -60,3 +60,10 @@ interface = gr.Interface(
         ["A new method for solving the nonlinear eigenvalue problem"]
     ]
 )
+
+
+"""-----------------Run the app-----------------"""
+if __name__ == "__main__":
+    interface.launch()
+
+# 'python gradio_app_json.py' on terminal, remmember to activate the environment
