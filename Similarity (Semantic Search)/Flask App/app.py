@@ -44,7 +44,7 @@ def retrieve(query, k=5):
         )
     
     # conver to json
-    results = json.dumps(results)
+    #results = json.dumps(results)
     return results
 
 
@@ -60,7 +60,8 @@ def predict():
     return render_template('index.html', search_results=results)
 
 
-    
 
+
+# Run the app
 if __name__ == '__main__':
     app.run(debug=True)
