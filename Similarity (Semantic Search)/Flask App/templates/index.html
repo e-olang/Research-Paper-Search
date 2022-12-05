@@ -18,8 +18,9 @@
 
         <div class="container">
             <form action="{{url_for('predict')}}" method="post">
+                <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
                 <input type="text" name="query" placeholder="Query Text" required="required" />
-                <button type="submit" class="btn btn-primary btn-block btn-large">
+                <button type="submit" class="btn btn-block btn-outline-success">
                     Search
                 </button>
             </form>
@@ -36,7 +37,7 @@
         </div>
 
         {% for result in search_results %}
-        <div class="container">
+        <div class="container center">
             <!-- Itterate over the search_results-->
             <p> {{ result['Title'] }} </p>
             <p> {{ search_results[0]['Author'] }}, {{ search_results[0]['Year'] }} </p>
