@@ -12,38 +12,40 @@
 
         <div class="container">
             <div class="heading">
-                <h1>Similarity Search Engine</h1>
+                <h2 align="center">Similarity Search Engine</h2>
             </div>
         </div>
+        <br>
 
-        <div class="container">
+        <div class="container text-center">
             <form action="{{url_for('predict')}}" method="post">
-                <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-                <input type="text" name="query" placeholder="Query Text" required="required" />
+                <input type="text" name="query" placeholder="Query Text" required="required" class="form-control input-lg" /> <br>
                 <button type="submit" class="btn btn-block btn-outline-success">
                     Search
                 </button>
             </form>
         </div>
         
-        <br />
-        <br />
-        <br />
+        <br>
+        <br>
         
         <div class="container">
             <div class="heading">
-                <h2>Results</h2>
+                <h3>Results</h3>
             </div>
         </div>
 
         {% for result in search_results %}
         <div class="container center">
             <!-- Itterate over the search_results-->
-            <p> {{ result['Title'] }} </p>
-            <p> {{ search_results[0]['Author'] }}, {{ search_results[0]['Year'] }} </p>
-            <p> {{ search_results[0]['Summary'] }} </p>
+            <p> <i>Paper Title: </i> {{ result['Title'] }} </p>
+            <p> <i>By: </i> {{ result['Author'] }}, {{ result['Year'] }} </p>
+            <i> Paper Summary </i>
+            <p align="justify"> {{ result['Summary'] }} </p>
+            <hr>
 
         </div>
         {% endfor %}
+
     </body>
 </html>
