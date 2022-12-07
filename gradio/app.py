@@ -7,7 +7,7 @@ from sentence_transformers import SentenceTransformer
 # Running the flask app
 app = Flask(__name__)
 
-#load model using pickle
+#load files/resources using pickle
 with open('resources/titles.pkl', 'rb') as f:
     titles = pickle.load(f)
 
@@ -26,7 +26,6 @@ with open('resources/summary.pkl', 'rb') as f:
 index = pickle.load(open('resources/index.sav' , 'rb'))
 
 model = pickle.load(open('resources/model.sav' , 'rb'))
-#model = SentenceTransformer('sentence-transformers/multi-qa-MiniLM-L6-cos-v1')
 
 def retrieve(query, k=5):
     xq = model.encode([query])
@@ -43,8 +42,6 @@ def retrieve(query, k=5):
             }
         )
     
-    # conver to json
-    #results = json.dumps(results)
     return results
 
 
