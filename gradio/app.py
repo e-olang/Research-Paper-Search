@@ -1,8 +1,8 @@
-import flask
+#import flask
 from flask import Flask, render_template, request, jsonify
 import pickle
 import json
-from sentence_transformers import SentenceTransformer
+#from sentence_transformers import SentenceTransformer
 
 # Running the flask app
 app = Flask(__name__)
