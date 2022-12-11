@@ -1,4 +1,0 @@
-sentence-transformers==2.2.2
-flask==2.0.3
-faiss-cpu==1.7.3
-numpy==1.21.2 
