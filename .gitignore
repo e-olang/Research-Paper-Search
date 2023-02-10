@@ -3,6 +3,7 @@
 *.csv
 *.pkl
 *.sav
+*.bin
 
 # Directories
 sampledata
