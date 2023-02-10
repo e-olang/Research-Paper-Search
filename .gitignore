@@ -13,3 +13,8 @@ Archive
 Similarity (Semantic Search)/Sample_jsons/
 Django/
 Similarity (Semantic Search)/deploy draft.ipynb
+
+
+# Hidden train data and files
+Training/Tokenizer/
+Training/model/
