@@ -4,11 +4,10 @@
 *.pkl
 *.sav
 *.bin
+*.txt
 
 # Directories
 Drafts
 Archive
-Similarity (Semantic Search)/deploy draft.ipynb
-Training/model
-Training/Tokenizer
+Semantic Search
 
