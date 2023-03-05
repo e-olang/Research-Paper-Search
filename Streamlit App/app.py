@@ -67,6 +67,13 @@ def main():
             st.markdown(f"<p style='text-align: justify;'>{result['Summary']}</p>", unsafe_allow_html=True)
             st.markdown(f"<a href='{result['Title URL']}'>Google Search</a>", unsafe_allow_html=True)
             st.write("--" * 50)
+        
+
+        # store user query in a text file, 
+        # The purpose of this is to build a collection of user queries for future use when building a bigger data pool for the search engine
+        with open('resources/user_query.txt', 'a') as f:
+            f.write(query_text + " ")
+        
 
 if __name__ == "__main__":
     main()
