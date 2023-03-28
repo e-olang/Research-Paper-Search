@@ -50,9 +50,16 @@ def query(query_text, k=5):
 
 def main():
     # Streamlit App
-    st.title("Search Engine")
+    st.title("Research Paper/ Publication Search Engine")
 
-    query_text = st.text_input("Enter your query")
+    # app description
+    st.markdown(f"<p style='text-align: justify;'>This is a search engine that uses a pre-trained sentence transformer model to encode the user query and the abstracts of the papers. The encoded vectors are then used to find the most similar papers to the user query.", unsafe_allow_html=True)
+
+    # DISCLAIMER: Data capture
+    st.markdown(f"<p style='text-align: justify;'>Please note that the search engine captures the user query and stores it in a text file. This is done to build a collection of user queries for future use when building a bigger data pool for the search engine.  \nline", unsafe_allow_html=True)
+    
+
+    query_text = st.text_input("Enter your query e.g. NLP")
 
     if st.button("Search"):
         results = query(query_text)
@@ -72,7 +79,7 @@ def main():
         # store user query in a text file, 
         # The purpose of this is to build a collection of user queries for future use when building a bigger data pool for the search engine
         with open('resources/user_query.txt', 'a') as f:
-            f.write(query_text + " ")
+            f.write(query_text + "\n")
         
 
 if __name__ == "__main__":
